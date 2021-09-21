@@ -1,0 +1,29 @@
+.header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:  25px;
+    background-color: rgb(230, 224, 213);
+    position
+  
+    .logo-container {
+      height: 100%;
+      width: 70px;
+      padding: 9px 25px;
+    }
+  .logo {
+      width: 50px;
+  }
+    .options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+  
+      .option {
+        padding: 15px 15px 5px 15px;
+      }
+    }
+  }
