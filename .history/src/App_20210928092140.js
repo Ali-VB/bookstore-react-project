@@ -17,7 +17,7 @@ class App extends React.Component {
         currentUser: null
       }
     } */
-
+      
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -50,11 +50,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route exact path='/shop' component={ShopPage} />
-          <Route exact path='/signin'
-            render={() => this.props.currentUser ?
-              (<Redirect to='/' />) :
-              (<SignInSignUp />)} />
-
+          <Route exact path='/signin' component={SignInSignUp} />
         </Switch>
       </div>
     );
@@ -62,10 +58,10 @@ class App extends React.Component {
 
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps= ({user}) => ({
+  
 })
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
